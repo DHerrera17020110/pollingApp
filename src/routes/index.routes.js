@@ -4,6 +4,7 @@ const path =  require('path');
 
 const controllers =  require('../controllers/form.controller');
 
-router.get('/', controllers.index);
+router.get('/', controllers.login);
+router.get('/home', controllers.index);
 
 module.exports = router;

@@ -1,62 +1,62 @@
 <!-- Define que el documento esta bajo el estandar de HTML 5 -->
 <!doctype html>
-
-<!-- Representa la raíz de un documento HTML o XHTML. Todos los demás elementos deben ser descendientes de este elemento. -->
 <html lang="es">
-    
     <head>
-        
         <meta charset="utf-8">
-        
         <title> Formulario de Acceso </title>    
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <meta name="author" content="Videojuegos & Desarrollo">
         <meta name="description" content="Muestra de un formulario de acceso en HTML y CSS">
         <meta name="keywords" content="Formulario Acceso, Formulario de LogIn">
-        
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
-        
-        <!-- Link hacia el archivo de estilos css -->
-        <link rel="stylesheet" href="css/login.css">
-        
-        <style type="text/css">
-            
-        </style>
-        
-        <script type="text/javascript">
-        
-        </script>
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../public/css/login.css">
+        <link rel="stylesheet" href="../public/css/styles.css">
     </head>
-    
+    <header>
+        <div class="row">
+            <div class="col-1 d-flex justify-content-center animate__animated animate__backInDown">
+                <a href="http://localhost:3000"><img src="../public/images/itsa.png" alt=""></a>
+            </div>
+            <div class="col-10 title text-center align-self-center">INSTITUTO TECNOLOGICO SUPERIOR DE APATZINGAN</div>
+        </div>
+    </header>
     <body>
-        
-        <div id="contenedor">
-            <div id="central">
-                <div id="login">
-                    <div class="titulo">
-                        Bienvenido
+        <div class="container">
+            <div class="row justify-content-center" style="margin-top: 5em; height: 50vh;">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-4 align-self-center" style="background-color: red;">
+                    <div class="row">
+                        <div class="col text-center">Bienvenido</div>
                     </div>
-                    <form id="loginform">
-                        <input type="text" name="usuario" placeholder="Usuario" required>
-                        
-                        <input type="password" placeholder="Contraseña" name="password" required>
-                        
-                        <button type="submit" title="Ingresar" name="Ingresar">Login</button>
-                    </form>
-                    <div class="pie-form">
-                        <a href="#">¿Perdiste tu contraseña?</a>
-                        <a href="#">¿No tienes Cuenta? Registrate</a>
+                    <div class="row justify-content-center">
+                        <div class="col-9">
+                            <form action="">
+                                <div class="mb-2">
+                                    <input type="text" class="form-control" placeholder="Usuario" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" placeholder="Contraseña" required>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button id="submitButton" type="submit">Entrar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div id="emailHelp" class="form-text">Registrate</div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div id="emailHelp" class="form-text">Olvide  mi passs</div>
+                        </div>
                     </div>
-                </div>
-                <div class="inferior">
-                    <a href="#">Volver</a>
                 </div>
             </div>
         </div>
-            
     </body>
+    <script>
+        document.querySelector('#submitButton').addEventListener('click',(event)=>{
+            document.location="http://localhost:3000/home"
+        })
+    </script>
 </html>
