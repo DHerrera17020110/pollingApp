@@ -6,5 +6,5 @@ const controllers =  require('../controllers/form.controller');
 
 router.get('/', controllers.login);
 router.get('/home', controllers.index);
-
+router.get('/admin', controllers.admin);
 module.exports = router;
